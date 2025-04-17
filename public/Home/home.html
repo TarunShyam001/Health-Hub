@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Hub</title>
+  <link rel="stylesheet" href="../navigation.css" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://allcountyhealthcare.com/wp-content/uploads/2019/06/Medicare-All-County-Health-Care-icon.jpg" alt="Logo">
+      <h1>Health Hub</h1>
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../Home/home.html" class="active"> Home </a></li>
+        <li><a href="../Appoitments/appointment.html"> Appointments </a></li>
+        <li><a href="../Doctor/doctor.html"> Doctors </a></li>
+        <li><a href="../Login/login.html"><span id="login"> Login </span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+      function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+      }
+  </script>
+
+  <main>
+    <section class="intro">
+        <h2> Welcome to Health Hub! </h2>
+        <p>Hii <span id="username">User123</span>! HealthHub is a comprehensive and user-friendly web application designed to simplify and streamline the process of booking doctor appointments. Whether you're seeking general consultations, specialist advice, or telemedicine support, HealthConnect offers a seamless experience tailored to your healthcare needs. With secure user authentication, a detailed doctor directory, real-time appointment scheduling, personalized health profiles, and instant notifications, our platform empowers patients to take control of their medical care with ease and confidence. Say goodbye to long queues and endless calls – with HealthConnect, quality healthcare is just a click away.</p>
+    </section>
+
+    <section class="search-doctor">
+      <h2>Find a Doctor</h2>
+      <div class="input-link-row">
+        <input type="text" id="doctorSearch" placeholder="Search by name or specialty..." />
+        <a href="../Doctor/doctor.html">more...</a>
+      </div>
+    </section>
+
+    <section class="doctor-list" id="doctorList">
+      <!-- Dynamically injected doctors -->
+    </section>
+
+    <section class="appointment-form">
+      <h2>Book an Appointment</h2>
+      <form id="bookingForm">
+        <input type="text" id="patientName" placeholder="Your Name" required />
+        <input type="date" id="appointmentDate" required />
+        <select id="doctorSelect" required>
+          <option value="">Select Doctor</option>
+        </select>
+        <button type="submit">Book Now</button>
+      </form>
+      <div id="confirmation"></div>
+    </section>
+
+    <section class="appointments">
+      <h2>Upcoming Appointments</h2>
+      <ul id="appointmentList"></ul>
+    </section>
+  </main>
+
+  <script src="home.js"></script>
+</body>
+</html>

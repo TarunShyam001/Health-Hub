@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Hub</title>
+  <link rel="stylesheet" href="../navigation.css" />
+  <link rel="stylesheet" href="appointment.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://allcountyhealthcare.com/wp-content/uploads/2019/06/Medicare-All-County-Health-Care-icon.jpg" alt="Logo">
+      <h1>Health Hub</h1>
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../Home/home.html"> Home </a></li>
+        <li><a href="../Appoitments/appointment.html" class="active"> Appointments </a></li>
+        <li><a href="../Doctor/doctor.html"> Doctors </a></li>
+        <li><a href="../Login/login.html"><span id="login"> Login </span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    function toggleMenu() {
+          const navLinks = document.getElementById('nav-links');
+          navLinks.classList.toggle('active');
+    }
+  </script>
+
+  <main>
+
+  </main>
+
+  <script src="appointment.js"></script>
+</body>
+</html>

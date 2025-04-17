@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Health Hub</title>
+  <link rel="stylesheet" href="../navigation.css" />
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://allcountyhealthcare.com/wp-content/uploads/2019/06/Medicare-All-County-Health-Care-icon.jpg" alt="Logo">
+      <h1>Health Hub</h1>
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../Home/home.html"> Home </a></li>
+        <li><a href="../Appoitments/appointment.html"> Appointments </a></li>
+        <li><a href="../Doctor/doctor.html"> Doctors </a></li>
+        <li><a href="../Login/login.html"><span id="login"> Login </span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
+  <main>
+    <div class="register-container">
+      <h2>Create an Account</h2>
+
+      <div class="toggle-role">
+        <button id="patientBtn" class="active" onclick="switchRole('patient')">Patient</button>
+        <button id="doctorBtn" onclick="switchRole('doctor')">Doctor</button>
+      </div>
+
+      <form class="register-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="mobileNumber">Mobile Number</label>
+          <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a password" required>
+        </div>
+      
+        <!-- Doctor-only section -->
+        <div class="doctor-only hidden">
+
+          <div class="form-group">
+            <label for="specialty">Specialty</label>
+            <input type="text" id="specialty" name="specialty" placeholder="e.g. Cardiologist">
+          </div>
+
+          <div class="form-group">
+            <label for="degree">Degree</label>
+            <input type="text" id="degree" name="degree" placeholder="e.g. MD / MBBS">
+          </div>
+
+          <div class="form-group">
+            <label for="visitingCharge">Visiting Charge</label>
+            <input type="text" id="visitingCharge" name="visitingCharge" placeholder="e.g. ₹ 1200/-">
+          </div>
+
+          <div class="form-group">
+            <label for="experience">Experience</label>
+            <input type="text" id="experience" name="experience" placeholder="e.g. 10 years">
+          </div>
+
+          <div class="form-group">
+            <label for="clinic">Clinic/Hospital</label>
+            <input type="text" id="clinic" name="clinic" placeholder="e.g. Apollo Hospital, New Delhi">
+          </div>
+          
+        </div>
+      
+        <button type="submit">Register</button>
+      
+        <div class="form-links">
+          <a href="../Login/login.html">Already have an account? Login</a>
+        </div>
+      </form>
+      
+    </div>
+  </main>
+
+  <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Hub</title>
+  <link rel="stylesheet" href="../navigation.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://allcountyhealthcare.com/wp-content/uploads/2019/06/Medicare-All-County-Health-Care-icon.jpg" alt="Logo">
+      <h1>Health Hub</h1>
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../Home/home.html"> Home </a></li>
+        <li><a href="../Appoitments/appointment.html"> Appointments </a></li>
+        <li><a href="../Doctor/doctor.html"> Doctors </a></li>
+        <li><a href="../Login/login.html" class="active"><span id="login"> Login </span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+      function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+      }
+  </script>
+
+  <main>
+    <div class="login-container">
+      <h2>Login to Your Account</h2>
+      <form class="login-form">
+        <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+
+        <button type="submit">Login</button>
+
+        <div class="form-links">
+          <a href="../Register/register.html"> Register YourSelf</a>
+          <a href="../Forgot/forgot.html">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+
+  <script src="login.js"></script>
+</body>
+</html>
